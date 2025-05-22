@@ -219,5 +219,50 @@
     <p>Hosted on <a href="https://github.com/sullydux/Sullydux-games" target="_blank">GitHub</a></p>
   </footer>
 
+
+
+
+  <script>
+    const statsURL = "https://analytics.google.com/analytics/web/#/p490278638/reports/intelligenthome?params=_u..nav%3Dmaui&collectionId=events";
+    const correctPassword = "Dwarven Axe";
+  
+    // Create stats button
+    const statsBtn = document.createElement("button");
+    statsBtn.textContent = "📊 View Stats";
+    statsBtn.style.position = "fixed";
+    statsBtn.style.bottom = "20px";
+    statsBtn.style.left = "20px";
+    statsBtn.style.background = "#00ffff33";
+    statsBtn.style.color = "#00ffff";
+    statsBtn.style.border = "none";
+    statsBtn.style.padding = "10px 14px";
+    statsBtn.style.borderRadius = "12px";
+    statsBtn.style.fontSize = "0.9em";
+    statsBtn.style.cursor = "pointer";
+    statsBtn.style.zIndex = "9999";
+    statsBtn.style.boxShadow = "0 0 10px rgba(0,255,255,0.3)";
+    statsBtn.style.transition = "transform 0.2s ease";
+    statsBtn.onmouseover = () => statsBtn.style.transform = "scale(1.05)";
+    statsBtn.onmouseout = () => statsBtn.style.transform = "scale(1.0)";
+    document.body.appendChild(statsBtn);
+  
+    statsBtn.onclick = () => {
+      const saved = localStorage.getItem("sully-analytics-unlocked");
+  
+      if (saved === "true") {
+        window.open(statsURL, "_blank");
+      } else {
+        const input = prompt("Enter the secret password to access stats:");
+        if (input === correctPassword) {
+          localStorage.setItem("sully-analytics-unlocked", "true");
+          window.open(statsURL, "_blank");
+        } else {
+          alert("❌ Incorrect password.");
+        }
+      }
+    };
+  </script>
+
+
 </body>
 </html>
