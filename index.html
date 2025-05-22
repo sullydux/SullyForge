@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SullyForge</title>
   <link rel="icon" href="Icon.png" type="image/png">
+
+  <!-- Google Analytics 4 (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LB9KSBJEMS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LB9KSBJEMS');
+  </script>
+
   <style>
     * {
       box-sizing: border-box;
@@ -141,17 +151,7 @@
       }
     }
   </style>
-
-  <!-- Google Analytics tag -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LB9KSBJEMS"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-LB9KSBJEMS');
-  </script>
 </head>
-
 <body>
 
   <h1>SullyForge</h1>
@@ -161,12 +161,12 @@
 
       <!-- GAME CARD: The Forsaken Isle -->
       <div class="game-card">
-        <a href="https://sullydux.github.io/The-Forsaken-Isle/" target="_blank">
+        <a href="https://sullydux.github.io/The-Forsaken-Isle/" target="_blank" onclick="gtag('event', 'click', { event_category: 'Game Click', event_label: 'The Forsaken Isle' });">
           <img class="game-img" src="Forsaken Isle icon.png" alt="The Forsaken Isle Icon" />
         </a>
         <div class="game-info">
           <p class="game-desc">
-            Step into a vibrant pixel-art world of adventure, mystery, and danger. Battle powerful bosses, face off against formidable enemies, and befriend unique characters as you explore diverse environments. Delve into hidden caves, uncover ancient secrets, and solve intriguing mysteries.
+            Step into a vibrant pixel-art world of adventure, mystery, and danger. Battle powerful bosses, face off against formidable enemies, and befriend unique characters as you explore diverse environments...
           </p>
           <span class="platform-tag">Web + Download Offline</span>
           <a href="The Forsaken Isle 2.14.39.zip" class="download-button" download>Download Game V2.14.39</a>
@@ -175,12 +175,12 @@
 
       <!-- GAME CARD: Secret Warfare -->
       <div class="game-card">
-        <a href="https://sullydux.github.io/Secret-Warfare/" target="_blank">
+        <a href="https://sullydux.github.io/Secret-Warfare/" target="_blank" onclick="gtag('event', 'click', { event_category: 'Game Click', event_label: 'Secret Warfare' });">
           <img class="game-img" src="Secret Warefare Icon.png" alt="Secret Warfare Icon" />
         </a>
         <div class="game-info">
           <p class="game-desc">
-            In a world of secrets and shadows, only the unseen survive. As an elite agent in the Phantom Strike Division, you’ll infiltrate, sabotage, and vanish without a trace.
+            In a world of secrets and shadows, only the unseen survive. As an elite agent in the Phantom Strike Division...
           </p>
           <span class="platform-tag">Mobile & Web</span>
         </div>
@@ -188,12 +188,12 @@
 
       <!-- GAME CARD: Puzzle A Day -->
       <div class="game-card">
-        <a href="https://sullydux.github.io/Puzzzle-A-Day/" target="_blank">
+        <a href="https://sullydux.github.io/Puzzzle-A-Day/" target="_blank" onclick="gtag('event', 'click', { event_category: 'Game Click', event_label: 'Puzzle A Day' });">
           <img class="game-img" src="Icon4.png" alt="Puzzle A Day Icon" />
         </a>
         <div class="game-info">
           <p class="game-desc">
-            Every day there is a different puzzle to complete. Flip and rotate the pieces, no time limit. Just relax and solve.
+            Every day there is a different puzzle to complete. Turn pieces with arrow keys. No time limit. Just puzzle fun.
           </p>
           <span class="platform-tag">Web</span>
         </div>
@@ -206,35 +206,6 @@
     <p>Made by <a href="https://chat.openai.com/" target="_blank">ChatGPT</a> | Rest made by <a href="https://github.com/sullydux" target="_blank">Sullydux</a></p>
     <p>Hosted on <a href="https://github.com/sullydux/Sullydux-games" target="_blank">GitHub</a></p>
   </footer>
-
-  <!-- Track clicks on game links -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      document.querySelector('a[href="https://sullydux.github.io/The-Forsaken-Isle/"]')
-        ?.addEventListener("click", function () {
-          gtag("event", "link_click", {
-            event_category: "Game Click",
-            event_label: "The Forsaken Isle"
-          });
-        });
-
-      document.querySelector('a[href="https://sullydux.github.io/Secret-Warfare/"]')
-        ?.addEventListener("click", function () {
-          gtag("event", "link_click", {
-            event_category: "Game Click",
-            event_label: "Secret Warfare"
-          });
-        });
-
-      document.querySelector('a[href="https://sullydux.github.io/Puzzzle-A-Day/"]')
-        ?.addEventListener("click", function () {
-          gtag("event", "link_click", {
-            event_category: "Game Click",
-            event_label: "Puzzle A Day"
-          });
-        });
-    });
-  </script>
 
 </body>
 </html>
