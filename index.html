@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SullyForge</title>
   <link rel="icon" href="Icon.png" type="image/png">
-  
+
   <!-- Google Analytics gtag.js -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LB9KSBJEMS"></script>
   <script>
@@ -99,12 +99,10 @@
       padding: 4px 8px;
       border-radius: 8px;
       font-size: 0.8em;
-      margin-top: 10px;
       align-self: flex-start;
     }
 
     .download-button {
-      margin-top: 12px;
       background-color: #00ffff33;
       color: #00ffff;
       border: none;
@@ -120,6 +118,14 @@
 
     .download-button:hover {
       background-color: #00ffff55;
+    }
+
+    .game-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+      align-items: center;
     }
 
     footer {
@@ -172,8 +178,10 @@
           <p class="game-desc">
             Step into a vibrant pixel-art world of adventure, mystery, and danger. Battle powerful bosses, face off against formidable enemies, and befriend unique characters as you explore diverse environments. Delve into hidden caves, uncover ancient secrets, and solve intriguing mysteries. With a rich, immersive world teeming with animals and challenges, your journey will test your skills, wit, and courage at every turn. Will you uncover the truth and conquer the unknown?
           </p>
-          <span class="platform-tag">Web + Download Offline</span>
-          <a href="Downloads/The Forsaken Isle.zip" class="download-button" download>Download Game V2.14.40</a>
+          <div class="game-actions">
+            <span class="platform-tag">Web + Download Offline</span>
+            <a href="Downloads/The Forsaken Isle.zip" class="download-button" download>Download Game V2.14.40</a>
+          </div>
         </div>
       </div>
 
@@ -190,7 +198,9 @@
           <p class="game-desc">
             In a world of secrets and shadows, only the unseen survive. As an elite agent in the Phantom Strike Division, you’ll infiltrate, sabotage, and vanish without a trace. With stealth-driven levels and high-tech gear, every mission is a test of precision and nerve. Are you ready to step into the shadows and rewrite the rules of espionage?
           </p>
-          <span class="platform-tag">Mobile & Web</span>
+          <div class="game-actions">
+            <span class="platform-tag">Mobile & Web</span>
+          </div>
         </div>
       </div>
 
@@ -207,10 +217,15 @@
           <p class="game-desc">
             Every day there is a different puzzle to complete. You can turn the peaces by pressing the left and right keys. Flip the peaces by pressing up and down. Theres no time limit. Good luck!
           </p>
-          <span class="platform-tag">Web</span>
+          <div class="game-actions">
+            <span class="platform-tag">Web</span>
+          </div>
         </div>
       </div>
 
+
+
+      
     </div>
   </main>
 
@@ -218,51 +233,6 @@
     <p>Made by <a href="https://chat.openai.com/" target="_blank">ChatGPT</a> | Rest made by <a href="https://github.com/sullydux" target="_blank">Sullydux</a></p>
     <p>Hosted on <a href="https://github.com/sullydux/Sullydux-games" target="_blank">GitHub</a></p>
   </footer>
-
-
-
-
-  <script>
-    const statsURL = "https://analytics.google.com/analytics/web/#/p490278638/reports/intelligenthome?params=_u..nav%3Dmaui&collectionId=events";
-    const correctPassword = "Dwarven Axe";
-  
-    // Create stats button
-    const statsBtn = document.createElement("button");
-    statsBtn.textContent = "📊 View Stats";
-    statsBtn.style.position = "fixed";
-    statsBtn.style.bottom = "20px";
-    statsBtn.style.left = "20px";
-    statsBtn.style.background = "#00ffff33";
-    statsBtn.style.color = "#00ffff";
-    statsBtn.style.border = "none";
-    statsBtn.style.padding = "10px 14px";
-    statsBtn.style.borderRadius = "12px";
-    statsBtn.style.fontSize = "0.9em";
-    statsBtn.style.cursor = "pointer";
-    statsBtn.style.zIndex = "9999";
-    statsBtn.style.boxShadow = "0 0 10px rgba(0,255,255,0.3)";
-    statsBtn.style.transition = "transform 0.2s ease";
-    statsBtn.onmouseover = () => statsBtn.style.transform = "scale(1.05)";
-    statsBtn.onmouseout = () => statsBtn.style.transform = "scale(1.0)";
-    document.body.appendChild(statsBtn);
-  
-    statsBtn.onclick = () => {
-      const saved = localStorage.getItem("sully-analytics-unlocked");
-  
-      if (saved === "true") {
-        window.open(statsURL, "_blank");
-      } else {
-        const input = prompt("Enter the secret password to access stats:");
-        if (input === correctPassword) {
-          localStorage.setItem("sully-analytics-unlocked", "true");
-          window.open(statsURL, "_blank");
-        } else {
-          alert("❌ Incorrect password.");
-        }
-      }
-    };
-  </script>
-
 
 </body>
 </html>
