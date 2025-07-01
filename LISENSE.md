@@ -10,8 +10,8 @@ View Full Legal Code: https://creativecommons.org/licenses/by-nc-nd/4.0/legalcod
 
 All rights to the content, structure, and design of this repository and its related website are reserved by the author. This includes but is not limited to:
 
-- Lore, timelines, and documentation related to Sullydux projects
-- Project and game names, world titles, and related narrative elements
+- Descriptions
+- Project and game names
 - Visual assets, including logos, icons, and custom interface elements
 
 ---
